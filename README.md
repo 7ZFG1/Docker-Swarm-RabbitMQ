@@ -1,8 +1,6 @@
 # DOCKER SWARM RabbitMQ
 
-
-![Docker_Swarm_RMQ_Diagram drawio](https://user-images.githubusercontent.com/64545114/221503866-c48573eb-bcb1-49ab-9049-8708bd29c118.png)
-
+![221503866-c48573eb-bcb1-49ab-9049-8708bd29c118 (1)](https://github.com/7ZFG1/Docker-Swarm-RabbitMQ/assets/64545114/b265d193-6919-42ee-9622-54ebc79a0577)
 
 Docker Installation
 -------------------
