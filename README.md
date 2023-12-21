@@ -81,7 +81,7 @@ Farklı fiziksel cihazı node olarak ekleme
 > 3. satır 2. makineyi master yapar. Buradaki ```node_name``` 2. makinenin hostname'dir.
 ```
 docker swarm join-token worker   
-docker swarm join --token SWMTKN-1-3inx1g8r0x53504llosnmjfwl7xety05upr16jnfkr6pp07ixv-dvb12oxr9f4ghlmsjvsqa9mwn 10.220.220.36:2377 #üstteki komutun çıktısı, 2. makinede çalıştırılacak. !!Bu satır örnek olarak verilmiştir.
+docker swarm join --token "token" #üstteki komutun çıktısı, 2. makinede çalıştırılacak. !!Bu satır örnek olarak verilmiştir.
 docker node promote node_name   #1. makinede çalıştırılacak, 2. makineyi master yapar.
 ```
 
@@ -91,7 +91,7 @@ PC kapanırsa ve swarm yapısı bozulursa, pc'leri node'lardan çıkartıp tekra
 ```
 sudo docker swarm leave --force   #her iki pc için
 sudo docker swarm init   #1. pc için
-sudo docker swarm join --token SWMTKN-1-3inx1g8r0x53504llosnmjfwl7xety05upr16jnfkr6pp07ixv-dvb12oxr9f4ghlmsjvsqa9mwn 10.220.220.36:2377 #üstteki komutun çıktısı, 2. pc için, !!Bu satır örnek olarak verilmiştir.
+sudo docker swarm join --token "token" "IP":"port" #üstteki komutun çıktısı, 2. pc için, !!Bu satır örnek olarak verilmiştir.
 ```
 
 Networking
