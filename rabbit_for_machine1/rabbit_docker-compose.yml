@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+    rabbitmq1:
+        image: rabbitmq-cluster-base
+        hostname: rabbitmq1
+        environment:
+            - RABBITMQ_ERLANG_COOKIE=12345
+            - RABBITMQ_DEFAULT_USER=guest
+            - RABBITMQ_DEFAULT_PASS=guest
+            - RABBITMQ_DEFAULT_VHOST=/
+        volumes:
+            - rabbitmq-01-data:/var/lib/rabbitmq
+        ports:
+          - "1937:1936"
+          - "15673:15672"
+          - "5673:5672"
+        restart: always
+
+networks:
+  default:
+    external: true
+    name: my-attachable-overlay
+        
+volumes:
+    rabbitmq-01-data:

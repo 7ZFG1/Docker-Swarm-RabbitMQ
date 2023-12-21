@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  
+  haproxy:
+    image: haproxy-base
+    #build:
+    #  context: ./haproxy
+    #  dockerfile: dockerfile    
+    hostname: haproxy
+    volumes: 
+      - haproxy-data:/data    
+    deploy:
+      replicas: 1
+    ports:
+      - "1936:1936"
+      - "15672:15672"
+      - "5672:5672"    
+
+networks:
+  default:
+    external: true
+    name: my-attachable-overlay
+
+volumes:
+    haproxy-data:
